@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #0c2340; /* Royal/Navy school theme */
+    --accent-color: #d4af37;  /* Gold accent */
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+header h1 { margin: 0; font-size: 2.2rem; }
+header h2 { margin: 0.5rem 0 0; font-weight: 400; color: var(--accent-color); }
+
+.portal-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-section {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-section h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Grid setup for choices */
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Custom Checkbox/Radio Cards */
+.candidate-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.candidate-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.card-content {
+    background: #fff;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder box for images */
+.img-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #e9ecef;
+    border: 2px dashed #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+}
+
+.candidate-name {
+    font-weight: 600;
+    display: block;
+}
+
+/* Selected state styling */
+.candidate-card input[type="radio"]:checked + .card-content {
+    border-color: var(--primary-color);
+    background-color: #f0f4f8;
+    box-shadow: 0 0 8px rgba(12, 35, 64, 0.2);
+}
+
+/* Inside style.css */
+
+.candidate-img {
+    width: 100%;
+    height: 180px;         /* Standardized height for all student portraits */
+    object-fit: cover;     /* Crops the image perfectly without squishing faces */
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    background-color: #e9ecef; /* Fallback gray background while loading */
+}
+
+.abstain-card .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 150px;
+    background: #fafafa;
+}
+
+/* Submit button */
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #14355e;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}

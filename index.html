@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominion Christian Academy - E-Voting Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Dominion Christian Academy</h1>
+            <h2>Prefect Elections Portal</h2>
+            <p>Cast your vote for the leaders of tomorrow.</p>
+        </div>
+    </header>
+
+    <main class="portal-container">
+        <form id="votingForm" action="https://script.google.com/macros/s/AKfycbyWUu2VshRtQ8_0h0QPVwvhs6Bw6kwn2rcytXyGzPAjoPJCCzQUnQ0oQWnQLomCa1xP/exec" method="POST">
+            
+            <section class="form-section">
+                <h3>Voter Verification</h3>
+                <div class="input-group">
+                    <label for="studentId">Student ID / Index Number</label>
+                    <input type="text" id="studentId" name="StudentID" required placeholder="e.g., DCA-2026-01">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Head Girl</h3>
+                <div class="candidates-grid">
+                    
+                    <label class="candidate-card">
+                        <input type="radio" name="HeadGirl" value="Natasha Van De Horst" required>
+                        <div class="card-content">
+                           <img src="natasha.jpg" alt="Natasha Van De Horst" class="candidate-img">
+                            <span class="candidate-name">Natasha Van De Horst</span>
+                        </div>
+                    </label>
+
+                    <label class="candidate-card">
+                        <input type="radio" name="HeadGirl" value="Zoe Okai">
+                        <div class="card-content">
+                           <img src="zoe.jpg" alt="Zoe Okai" class="candidate-img">
+                            <span class="candidate-name">Zoe Okai</span>
+                        </div>
+                    </label>
+
+                    <label class="candidate-card">
+                        <input type="radio" name="HeadGirl" value="Efua Yayra Eyiah">
+                        <div class="card-content">
+                           <img src="efua.jpg" alt="Efua Yayra Eyiah" class="candidate-img">
+                            <span class="candidate-name">Efua Yayra Eyiah</span>
+                        </div>
+                    </label>
+
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Head Boy</h3>
+                <div class="candidates-grid single-candidate">
+                    <label class="candidate-card">
+                        <input type="radio" name="HeadBoy" value="Sule Gabriel" required>
+                        <div class="card-content">
+                            <img src="gabriel.jpg" alt="Sule Gabriel" class="candidate-img">
+                            <span class="candidate-name">Sule Gabriel</span>
+                        </div>
+                    </label>
+                    <label class="candidate-card abstain-card">
+                        <input type="radio" name="HeadBoy" value="Abstain">
+                        <div class="card-content">
+                            <span class="candidate-name">Abstain / No Vote</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Sports Prefect</h3>
+                <div class="candidates-grid single-candidate">
+                    <label class="candidate-card">
+                        <input type="radio" name="Sports" value="Christina Otoo" required>
+                        <div class="card-content">
+                            <img src="christina.jpg" alt="Christina Otoo" class="candidate-img">
+                            <span class="candidate-name">Christina Otoo</span>
+                        </div>
+                    </label>
+                    <label class="candidate-card abstain-card">
+                        <input type="radio" name="Sports" value="Abstain">
+                        <div class="card-content">
+                            <span class="candidate-name">Abstain / No Vote</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Events & Entertainment Prefect</h3>
+                <div class="candidates-grid single-candidate">
+                    <label class="candidate-card">
+                        <input type="radio" name="Entertainment" value="Christina Otoo" required>
+                        <div class="card-content">
+                            <img src="christina.jpg" alt="Christina Otoo" class="candidate-img">
+                            <span class="candidate-name">Christina Otoo</span>
+                        </div>
+                    </label>
+                    <label class="candidate-card abstain-card">
+                        <input type="radio" name="Entertainment" value="Abstain">
+                        <div class="card-content">
+                            <span class="candidate-name">Abstain / No Vote</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Dining Hall Prefect</h3>
+                <div class="candidates-grid single-candidate">
+                    <label class="candidate-card">
+                        <input type="radio" name="DiningHall" value="Keith Gyampo" required>
+                        <div class="card-content">
+                            <img src="keith.jpg" alt="Keith Gyampo" class="candidate-img">
+                            <span class="candidate-name">Keith Gyampo</span>
+                        </div>
+                    </label>
+                    <label class="candidate-card abstain-card">
+                        <input type="radio" name="DiningHall" value="Abstain">
+                        <div class="card-content">
+                            <span class="candidate-name">Abstain / No Vote</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <button type="submit" id="submitBtn" class="submit-button">Submit Ballot</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dominion Christian Academy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
